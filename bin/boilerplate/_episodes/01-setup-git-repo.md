@@ -4,10 +4,6 @@ teaching: 1
 exercises: 1
 questions:
 - "What do I need to think about when creating a new repository on GitHub?"
-
-Create and setup GitHub repository: setup SSH key, create repo from template, 
-manage access of the created repository, give maintainer access of the created project to ids-developers team)
-
 objectives:
 - "Know how to setup a GitHub repository according to IDS standards."
 - "Understand the benifits of templates and how they differ from forking/cloning."
@@ -36,3 +32,5 @@ Some introductory text
 > *   first step 
 >
 {: .challenge}
+
+{% include links.md %}
