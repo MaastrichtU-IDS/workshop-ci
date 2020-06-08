@@ -4,8 +4,8 @@ layout: workshop      # DON'T CHANGE THIS.
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
 venue: "Maastricht University - IDS"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "Netherlands"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+address: "https://maastrichtuniversity.zoom.us/j/12345"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "NL"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
 language: "English"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the
 latitude: "50.839620"        # decimal latitude of workshop venue (use https://www.latlong.net/)
 longitude: "5.715290"       # decimal longitude of the workshop venue (use https://www.latlong.net)
@@ -31,27 +31,6 @@ It looks like you are setting up a website for a Data Carpentry curriculum but y
 </div>
 {% endunless %}
 {% endif %}
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the 
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
-{% endif %}
-
 
 <h2 id="general">General Information</h2>
 
@@ -141,8 +120,7 @@ SPECIAL REQUIREMENTS
 Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
+  <strong>Requirements:</strong> Participants must have a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. In case of a Windows operating system, hyper-v should be enabled in the BIOS (contact the instructors/helpers beforehand for assistance). They should have a few specific software packages installed (listed <a href="#setup">below</a>).
 </p>
 
 {% comment %}
@@ -199,25 +177,6 @@ Display the contact email address set in the configuration file.
   {% endif %}
   for more information.
 </p>
-
-<hr/>
-
-{% comment%}
-CODE OF CONDUCT
-{% endcomment %}
-<h2 id="code-of-conduct">Code of Conduct</h2>
-
-<p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
-</p>
-
-<p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
-    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
-  </a>
-</p>
-<hr/>
-
 
 {% comment %}
 Collaborative Notes
