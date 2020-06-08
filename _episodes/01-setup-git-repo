@@ -1,0 +1,41 @@
+---
+title: Setup Git repository
+teaching: 1
+exercises: 1
+questions:
+- "What do I need to think about when creating a new repository on GitHub?"
+
+Create and setup GitHub repository: setup SSH key, create repo from template, 
+manage access of the created repository, give maintainer access of the created project to ids-developers team)
+
+objectives:
+- "Know how to setup a GitHub repository according to IDS standards."
+- "Understand the benifits of templates and how they differ from forking/cloning."
+- "Understand how to allow the different levels of access to your repository."
+keypoints:
+- "When creating a GitHub repository keep permissions in mind."
+- "Templates are a quick way to scaffold your application."
+---
+
+Some introductory text
+
+> ## Create a repository from template
+>
+> *   first step 
+
+>
+{: .challenge}
+
+> ## Configure repository permissions
+>
+> *   first step 
+
+>
+{: .challenge}
+
+> ## Configure SSH
+>
+> *   first step 
+
+>
+{: .challenge}
