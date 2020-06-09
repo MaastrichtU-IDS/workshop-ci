@@ -1,18 +1,24 @@
+# Travis CI is only used to check the lesson and is not involved in its deployment
+dist: xenial  # Ubuntu 16.04 (required for python 3.7)
 language: python
-python:
-  - "3.6"
-# Remember that the code is running on a 14.04 machine.  
-#  - "3.4"
-# command to install dependencies
-install:
-  - pip install -r requirements.txt  
-    # as per https://docs.travis-ci.com/user/installing-dependencies/  
-# command to run tests
-before_script:
-  - "python bin/_travis.py"  
-script:
-  - python bin/workshop_check.py .
-  - python -m unittest bin/_test/bs4test.py 
+python: 3.7
 branches:
   only:
-    - gh-pages
+  - gh-pages
+  - /.*/
+before_install:
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+  - echo "deb https://cloud.r-project.org/bin/linux/ubuntu xenial-cran35/" | sudo tee -a /etc/apt/sources.list
+  - sudo apt-get update -y
+  - sudo apt-get install -y r-base
+  - sudo Rscript -e "install.packages('knitr', repos = 'https://', dependencies = TRUE)"
+  - sudo Rscript -e "install.packages('stringr', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
+  - sudo Rscript -e "install.packages('checkpoint', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
+  - sudo Rscript -e "install.packages('ggplot2', repos = 'https://cran.rstudio.com', dependencies = TRUE)"
+  - rvm default
+  - gem install json kramdown jekyll bundler
+install:
+  - pip install pyyaml
+script:
+  - make lesson-check-all
+  - make --always-make site
