@@ -1,5 +1,5 @@
 ---
-title: Setup Git repository
+title: Publish to the GitHub marketplace
 teaching: 1
 exercises: 1
 questions:

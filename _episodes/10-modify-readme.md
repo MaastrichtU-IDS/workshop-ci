@@ -1,5 +1,5 @@
 ---
-title: Setup Git repository
+title: Complete the readme
 teaching: 1
 exercises: 1
 questions:

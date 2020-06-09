@@ -1,5 +1,5 @@
 ---
-title: Setup Git repository
+title: Push a Docker image to DockerHub
 teaching: 1
 exercises: 1
 questions:

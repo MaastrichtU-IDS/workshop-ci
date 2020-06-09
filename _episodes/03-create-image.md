@@ -1,5 +1,5 @@
 ---
-title: Setup Git repository
+title: Create a container image with Docker
 teaching: 1
 exercises: 1
 questions:

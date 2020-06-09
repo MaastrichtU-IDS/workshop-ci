@@ -1,5 +1,5 @@
 ---
-title: Setup Git repository
+title: Add a Docker build action
 teaching: 1
 exercises: 1
 questions:

@@ -1,5 +1,5 @@
 ---
-title: Setup Git repository
+title: Improve the Pipeline
 teaching: 1
 exercises: 1
 questions:
