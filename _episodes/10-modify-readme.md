@@ -32,5 +32,3 @@ Some introductory text
 > *   first step 
 >
 {: .challenge}
-
-{% include links.md %}
