@@ -12,7 +12,7 @@ keypoints:
 - "When creating a GitHub repository keep permissions in mind."
 - "Templates are a quick way to scaffold your application."
 ---
-
+## Introduction
 Setting up a GIT repository should always be the first step for any software related project. For the many advantages of using GIT check !!here!!. While there are many options for hosting your repository, the default choice at IDS is GitHub. Some of the advantages of using GitHub are features like free processing power, free artifact hosting, a large community and having all IDS repositories searchable under the same organisation. 
 When first setting up a GitHub repository, there are a number of things to consider:
 - Is there a template I can use to save time setting everything up?
@@ -50,6 +50,8 @@ Check [here](https://help.github.com/en/github/setting-up-and-managing-organizat
 > *   Add the MaastrichtU-IDS/developers team and provide them with *Write* access.
 > *   Add the MaastrichtU-IDS/admins team and provide them with *Admin* access.
 {: .challenge}
+
+## Using SSH
 
 SSH keys provide an easy way to access your GitHub repositories without having supplying your username and password every time. This is done by generating a *keypair*, publishing the public key on GitHub and storing the private key locally on your machine.
 
