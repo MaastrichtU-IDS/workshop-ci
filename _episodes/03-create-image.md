@@ -51,6 +51,9 @@ RUN pip install -r requirements.txt
 RUN pip install -e ${HOME}/${APP_NAME}
 ```
 
+FIXME add some comments about order of docker commands
+FIXME add good practices for things like location of data, app etc.
+
 > ## Create a Docker Image
 > * In the root of your repository, create a file named *Dockerfile* (with no extension).
 > * Start your Image from an existing image with Python already included by adding ```dockerfile FROM python:3```to your *Dockerfile*.
@@ -75,7 +78,7 @@ Creates the container just as the create command, and afterwards runs it. It the
 
 > ## Configure repository permissions
 >
-> *   first step 
+> *   Create and run your application (```  ```) inside a container based on the image created earlier.
 >
 {: .challenge}
 

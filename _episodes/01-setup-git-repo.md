@@ -13,7 +13,7 @@ keypoints:
 - "Templates are a quick way to scaffold your application."
 ---
 ## Introduction
-Setting up a GIT repository should always be the first step for any software related project. For the many advantages of using GIT check !!here!!. While there are many options for hosting your repository, the default choice at IDS is GitHub. Some of the advantages of using GitHub are features like free processing power, free artifact hosting, a large community and having all IDS repositories searchable under the same organisation. 
+Setting up a GIT repository should always be the first step for any software related project. For the many advantages of using GIT check [here](https://guides.github.com/introduction/git-handbook/). While there are many options for hosting your repository, the default choice at IDS is GitHub. Some of the advantages of using GitHub are features like free processing power, free artifact hosting, a large community and having all IDS repositories searchable under the same organisation. 
 When first setting up a GitHub repository, there are a number of things to consider:
 - Is there a template I can use to save time setting everything up?
 - Who will have permissions to read/write/administrate this repository?
@@ -28,7 +28,9 @@ GitHub templates are a quick way to start your application with the scaffolding 
 > ## Create a repository from template
 >
 > * In [GitHub](https://GitHub.com), Use the **+** icon to create a new repository. 
+> ![Forking Repositories]({{ page.root }}/fig/plus-icon.png)
 > * Choose the MaastrichtU-IDS/workshop-ci-template from the repository template dropdown.
+> ![Forking Repositories]({{ page.root }}/fig/template-selection.png)
 > * Select MaastrichtU-IDS as the owner of the repository.
 > * Add a name and description to your repository and leave the access on *private*. 
 {: .challenge}
@@ -42,7 +44,7 @@ GitHub diffferentiates between 5 different types of access:
 - **Maintain** - Allows users to do more potentially destructive things such as pushing to protected branches. 
 - **Admin** - Allows users to do anything, such as deleting or transferring the repository.
 
-Check [here](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization) for a detailed overview. To save time, GitHub allows organizations to create teams of usersfor which permissions can be handled in one go. 
+Check [here](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/repository-permission-levels-for-an-organization) for a detailed overview. In almost all cases, using the *read* or *write* permissions will suffice and should be considered first. To save time, GitHub allows organizations to create teams of usersfor which permissions can be handled in one go. 
 
 > ## Configure repository permissions
 > *   Under *settings* for your repository, go to **Manage access**.

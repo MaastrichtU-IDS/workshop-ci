@@ -1,34 +1,56 @@
 ---
-title: Run the application locally
+title: Developing applications locally
 teaching: 1
 exercises: 1
 questions:
-- "What do I need to think about when creating a new repository on GitHub?"
+- "How do I develop my application locally before starting with CI/CD?"
 objectives:
-- "Know how to setup a GitHub repository according to IDS standards."
-- "Understand the benifits of templates and how they differ from forking/cloning."
-- "Understand how to allow the different levels of access to your repository."
+- "Testing the application before trying to run it in Docker."
+- "Continuous improvement of the readme.md"
 keypoints:
-- "When creating a GitHub repository keep permissions in mind."
-- "Templates are a quick way to scaffold your application."
+- "Write an appropriate amount of tests for your purpose."
+- "Make sure to update your readme.md intermittently during development."
 ---
 
-Some introductory text
+## Introduction
 
-> ## Create a repository from template
+Leaving documentation and testing for a 'finished' product is generally a bad idea. You should try to develop small features, document and test them and commit these small changes as you go along. Developing in such a way could be time consuming if we have to manually test, build and deploy the application each time. However since we will be adding CI/CD to our projects, all these operations will be executed automatically when code is pushed to the repository. This ensures that the code is constantly in a state where it is documented, tested and available for others to review and use.
+
+## Running the Python application
+
+Before starting with CI/CD we will first check the application works correctly locally. The Python template comes with a setup.py file which allows an easy pip install of our application. Since performing '''bash pip3 install .''' each time we make a change can be tiresome, the -e argument can be added to pip install, to automatically reflect any change you make to the application directly in the environment.
+
+> ## Running the application
 >
-> *   first step 
+> * Run ```bash pip3 install -e .  ```
+> * Run ```bash workshop_ci hello-world --help  ``` to see how to run your application.
+> * Run the application with the correct inputs.
 >
 {: .challenge}
 
-> ## Configure repository permissions
+## Writing and running tests
+
+There are many different kinds of tests which can be run for your application. Two of the most important are functional testing and unit testing. Functional testing is relatively straightforward. The application is assumed to be a black box, and the desired output is checked based on various inputs. Unit testing tests whether a 'unit' of code behaves as expected. When the code is divided up functionally into small methods, we can test these individually to see if they output the correct values for a number of inputs. Whenever someone makes a change to the method (or anything the method relies on), the unit test can be run to check everything is still as expected.
+
+It is important to realise that no amount of testing or covering your code with unit tests will guarantee that it works. It is only possible to get some degree of confidence. How many tests you write is dependent on the required quality, the number of people working on your project and how much long term development you expect will be done. A large enterprise application developed by a company will require much more testing than a prototype created by a single developer. 
+
+In almost all cases, tests are run automatically during the CI/CD process. If you should want them locally you can do so by performing the following steps.
+
+> ## Testing the application
 >
-> *   first step 
+> *   ```bash pip3 install pytest ```
+> *   ```bash pytest tests/``` 
 >
 {: .challenge}
 
-> ## Configure SSH
+## Adding documentation
+
+Continuousy adding documentation is vital for others to make sense of your code. At IDS, we prefer to use the README.md for development related documentation. Open features and bugs can be added to GitHub issues. For more general information on the software the GitHub wiki can be utilized. Project documentation is done in the IDS teams folder on Google Drive.
+
+> ## Adding documentation
 >
-> *   first step 
+> *   Add the steps to run and test the application to the README.md.
 >
 {: .challenge}
+
+{% include links.md %}
