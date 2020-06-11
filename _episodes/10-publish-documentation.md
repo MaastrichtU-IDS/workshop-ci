@@ -9,7 +9,7 @@ objectives:
 - "Understand the benifits of templates and how they differ from forking/cloning."
 - "Understand how to allow the different levels of access to your repository."
 keypoints:
-- "No one wants to read your dirty code to understand how to run your application, not even yourself."
+- "No one wants to read your dirty code to understand how to run your application, not even yourself in 2 months."
 - "So please publish a short, but exhaustive documentation about how to deploy and use your application."
 ---
 
