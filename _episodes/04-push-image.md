@@ -3,14 +3,12 @@ title: Push a Docker image to DockerHub
 teaching: 1
 exercises: 1
 questions:
-- "What do I need to think about when creating a new repository on GitHub?"
+- "How do I share my Docker Images with my colleagues?"
 objectives:
-- "Know how to setup a GitHub repository according to IDS standards."
-- "Understand the benifits of templates and how they differ from forking/cloning."
-- "Understand how to allow the different levels of access to your repository."
+- "Understand how Docker images are shared and reused."
+- "Know how to push images to a Docker repository."
 keypoints:
-- "When creating a GitHub repository keep permissions in mind."
-- "Templates are a quick way to scaffold your application."
+- "Sharing Docker images saves time recreating work and environments"
 ---
 
 Some introductory text
