@@ -1,5 +1,5 @@
 ---
-title: Developing applications locally
+title: Run application locally
 teaching: 1
 exercises: 1
 questions:
