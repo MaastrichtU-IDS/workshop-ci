@@ -37,7 +37,7 @@ Depending on the size of your application and your use-case you can choose betwe
 
 > ## Create a Gitter chat room
 >
-> Gitter is a service from GitLab which allows to easily create and use public and private chatrooms linked to GitHub repositories. Users can easily connect using their GitHub or GitLab account.
+> [Gitter](https://gitter.im/) is a service from GitLab which allows to easily create and use public and private chatrooms linked to GitHub repositories. Users can easily connect using their GitHub or GitLab account.
 >
 > * Login to Gitter using your GitHub account
 > * Access the workshop Gitter chat room (**TODO?**)
