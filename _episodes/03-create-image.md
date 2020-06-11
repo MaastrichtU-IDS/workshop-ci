@@ -18,7 +18,10 @@ keypoints:
 Docker is the foundation of most modern CI/CD solutions. Your application can be added to a Docker *container* which acts as a kind of super-lightweight virtual machine. Any further build steps can then be performed inside this *container*. For more in-depth information on Docker see [this workshop](https://github.com/MaastrichtU-IDS/docker-workshop).
 
 ## Creating a Docker image
-A Docker *image* is a blueprint for the container you want to create. Images can stored locally or on any Docker *repository* such as *DockerHub*. Images can then be *pulled* by different actors to run code in the exact same environment. In order to use the *image*, the actor creates a *container* from the image, which is an instantiation of the image. In order to create a Docker image, a *Dockerfile* is used to provide build instructions for the image (Check the [d2s documentation](https://maastrichtu-ids.github.io/dsri-documentation/docs/deploy-from-dockerhub#define-a-dockerfile)) for more information. The following instructions for example set environment variables for the build process and the eventual container:
+A Docker *image* is a blueprint for the container you want to create. Images can stored locally or on any Docker *repository* such as *DockerHub*. Images can then be *pulled* by different actors to run code in the exact same environment. In order to use the *image*, the actor creates a *container* from the image, which is an instantiation of the image. In order to create a Docker image, a *Dockerfile* is used to provide build instructions for the image (Check the [d2s documentation](https://maastrichtu-ids.github.io/dsri-documentation/docs/deploy-from-dockerhub#define-a-dockerfile)) for more information.
+
+
+ The following instructions for example set environment variables for the build process and the eventual container:
 
 ```dockerfile
 #ARG variables are only used during the building process. They will not be available in the container. ```
@@ -55,7 +58,7 @@ FIXME add some comments about order of docker commands
 FIXME add good practices for things like location of data, app etc.
 
 > ## Create a Docker Image
-> * In the root of your repository, create a file named *Dockerfile* (with no extension).
+> * In the root of your repository, open *Dockerfile*.
 > * Start your Image from an existing image with Python already included by adding ```dockerfile FROM python:3```to your *Dockerfile*.
 > * Add the first code snippet above to your *Dockerfile* to setup the image environment. 
 > * Add the second code snippet above to your *Dockerfile* to add contents from your repository to the image.

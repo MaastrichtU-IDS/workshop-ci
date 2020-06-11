@@ -23,14 +23,16 @@ Create and setup GitHub repository: setup SSH key, create repo from template, ma
 
 ## GitHub templates
 
-GitHub templates are a quick way to start your application with the scaffolding already in place. This can save a lot of time as you don't have to worry about setting everything up. This could also be achieved by forking a repository. However forking is meant more for collaborating on the original repository. In the case of using a template you will not include the entire commit history of the original project for example. It's a fresh start as if you had simply copy pasted the code into a fresh repository. At IDS we have a number of templates ready to use for Python, Java and React websites.
+GitHub templates are a quick way to start your application with the scaffolding already in place. This can save a lot of time as you don't have to worry about setting everything up. This could also be achieved by forking a repository. However forking is meant more for collaborating on the original repository. In the case of using a template you will not include the entire commit history of the original project for example. It's a fresh start as if you had simply copy pasted the code into a fresh repository. At IDS we are developing a number of templates ready to use for Python, Java and React websites.
+
+Note that there are many generic solutions to 'scaffold' your application when starting a new project. For Python, [https://github.com/cookiecutter/cookiecutter](cookiecutter) is a popular solution.
 
 > ## Create a repository from template
 >
 > * In [GitHub](https://GitHub.com), Use the **+** icon to create a new repository. 
-> ![Forking Repositories]({{ page.root }}/fig/plus-icon.png)
+> ![Creating a Repository]({{ page.root }}/fig/plus-icon.png)
 > * Choose the MaastrichtU-IDS/workshop-ci-template from the repository template dropdown.
-> ![Forking Repositories]({{ page.root }}/fig/template-selection.png)
+> ![Selecting a Template]({{ page.root }}/fig/template-selection.png)
 > * Select MaastrichtU-IDS as the owner of the repository.
 > * Add a name and description to your repository and leave the access on *private*. 
 {: .challenge}
