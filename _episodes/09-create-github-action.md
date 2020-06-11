@@ -1,13 +1,13 @@
 ---
-title: Publish to the GitHub marketplace
+title: Create a GitHub Action for your package
 teaching: 1
 exercises: 1
 questions:
-- "What do I need to think about when creating a new repository on GitHub?"
+- "How can I use the application I just packaged as a GitHub Action?"
 objectives:
-- "Know how to setup a GitHub repository according to IDS standards."
-- "Understand the benifits of templates and how they differ from forking/cloning."
-- "Understand how to allow the different levels of access to your repository."
+- "Create a separate repository to define your action"
+- "Write action.yml and README.md"
+- "Publish to the GitHub Marketplace."
 keypoints:
 - "When creating a GitHub repository keep permissions in mind."
 - "Templates are a quick way to scaffold your application."
