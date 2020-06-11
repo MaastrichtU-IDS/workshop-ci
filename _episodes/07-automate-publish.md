@@ -1,5 +1,5 @@
 ---
-title: Add a Docker build action
+title: Automate the publication of your package using GitHub Actions
 teaching: 1
 exercises: 1
 questions:

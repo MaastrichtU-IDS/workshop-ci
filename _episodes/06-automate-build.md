@@ -1,5 +1,5 @@
 ---
-title: Improve the Pipeline
+title: Automate Docker build with GitHub Actions
 teaching: 1
 exercises: 1
 questions:

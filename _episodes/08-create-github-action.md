@@ -1,5 +1,5 @@
 ---
-title: Publish to PyPi
+title: Create a GitHub Action for your package
 teaching: 1
 exercises: 1
 questions:

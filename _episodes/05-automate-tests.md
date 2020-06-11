@@ -1,5 +1,5 @@
 ---
-title: Add a GitHub Action job
+title: Automate tests using GitHub Actions
 teaching: 1
 exercises: 1
 questions:
