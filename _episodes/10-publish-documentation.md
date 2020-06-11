@@ -48,7 +48,7 @@ Depending on the size of your application and your use-case you can choose betwe
 
 ## Automated and embedded Python documentation with MkDocs
 
-MkDocs is a library to generate and maintain documentation for your Python project.
+[MkDocs](https://www.mkdocs.org/) is a library to generate and maintain documentation for your Python project.
 
 The generated documentation goes to `docs/`
 
