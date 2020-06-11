@@ -9,8 +9,8 @@ objectives:
 - "Understand the benifits of templates and how they differ from forking/cloning."
 - "Understand how to allow the different levels of access to your repository."
 keypoints:
-- "When creating a GitHub repository keep permissions in mind."
-- "Templates are a quick way to scaffold your application."
+- "No one wants to read your dirty code to understand how to run your application, not even yourself."
+- "So please publish a short, but exhaustive documentation about how to deploy and use your application."
 ---
 
 Depending on the size of your application and your use-case you can choose between various options. All the options proposed here are using the Markdown format (the format used by the `README.md`)
