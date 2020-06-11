@@ -1,13 +1,13 @@
 ---
-title: Create a GitHub Action for your package
+title: Continous Deployment (CD) using GitHub Actions
 teaching: 1
 exercises: 1
 questions:
-- "What do I need to think about when creating a new repository on GitHub?"
+- "How do I deploy a service in production using a GitHub Action?"
 objectives:
-- "Know how to setup a GitHub repository according to IDS standards."
-- "Understand the benifits of templates and how they differ from forking/cloning."
-- "Understand how to allow the different levels of access to your repository."
+- "Show an example of deployment to GitHub Pages (docusaurus)."
+- "Show an example of deployment using a self-hosted runner"
+- "Show an example of deployment to a popular service provider (Heroku, AWS)"
 keypoints:
 - "When creating a GitHub repository keep permissions in mind."
 - "Templates are a quick way to scaffold your application."
