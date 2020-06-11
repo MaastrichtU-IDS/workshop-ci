@@ -21,18 +21,27 @@ Now that your application can be run locally and built as a Docker image we will
 >
 > GitHub Actions workflows will be run on a GitHub-hosted runner (on their servers). Note that you can also define an action to run on a server or on your local machine by [installing a self-hosted runner](https://help.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners). In this workshop we will only use the GitHub-hosted runner for convenience, but feel free to install a self-hosted runner to overcome GitHub limitations.
 >
-> The following [limitations apply to GitHub-hosted runner](https://help.github.com/en/actions/getting-started-with-github-actions/about-github-actions#usage-limits):
+> The following [limitations apply to GitHub-hosted runner](https://help.github.com/en/actions/getting-started-with-github-actions/about-github-actions#usage-limits) (they do not apply for self-hosted runners):
 >
 > * Each **job** in a workflow can run for up to **6 hours** of execution time.
 > * Each **workflow** run is limited to **72 hours**.
 > * Total **concurrent jobs** for the free plan: **20 jobs** (5 macOS)
 >
-> **GitHub Actions is free for Open Source projects 💸** 
+> GitHub-hosted runners run on [machines with the following specifications](https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners):
+>
+> * **2-core CPU**
+> * **7 GB** of RAM memory
+> * **14 GB** of SSD disk space
+> * Environments: `ubuntu-latest` (a.k.a. `ubuntu-18.04`), `ubuntu-20.04`, `windows-latest`, `macos-latest`
+>
+> **GitHub Actions is free for Open Source repositories 💸** 
+>
+> If you create a **public repository** you don't need to be careful with the execution time and storage you are consuming.
 >
 > [GitHub free plan](https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-github-actions) allows to run Actions **in private repositories**, but impose execution time and storage limitations. By default GitHub set your spending limit to 0 €, so you will not be billed by surprise. The free plan provides the following credits per months, they are attached to the user or organization owning the repository running the workflows:
 >
 > * **2,000 minutes** of execution time (~33h)
-> * **500 MB of storage** (for artifacts and GitHub Packages)
+> * **500 MB of storage** (for private artifacts and GitHub Packages)
 >
 > We recommend to use Linux runners, as jobs that run on Windows and macOS runners consume minutes at 2 and 10 times the rate that jobs on Linux runners consume.
 >
