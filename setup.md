@@ -21,5 +21,11 @@ FIXME docker
   We maintain a list of common issues that occur during installation as a reference for instructors
   that may be useful on the
 </p>
-
+{% if site.carpentry == "swc" %}
+{% include swc/setup.html %}
+{% elsif site.carpentry == "dc" %}
+{% include dc/setup.html %}
+{% elsif site.carpentry == "lc" %}
+{% include lc/setup.html %}
+{% endif %}
 {% include links.md %}
