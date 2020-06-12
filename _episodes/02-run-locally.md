@@ -12,10 +12,6 @@ keypoints:
 - "Make sure to update your readme.md intermittently during development."
 ---
 
-## Introduction
-
-Leaving documentation and testing for a 'finished' product is generally a bad idea. You should try to develop small features, document and test them and commit these small changes as you go along. Developing in such a way could be time consuming if we have to manually test, build and deploy the application each time. However since we will be adding CI/CD to our projects, all these operations will be executed automatically when code is pushed to the repository. This ensures that the code is constantly in a state where it is documented, tested and available for others to review and use.
-
 ## Running the Python application
 
 Before starting with CI/CD we will first check the application works correctly locally. The Python template comes with a setup.py file which allows an easy pip install of our application. Since performing '''bash pip3 install .''' each time we make a change can be tiresome, the -e argument can be added to pip install, to automatically reflect any change you make to the application directly in the environment.
