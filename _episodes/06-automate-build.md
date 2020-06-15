@@ -50,40 +50,39 @@ If the tests pass without failing you might want to build a Docker image for you
 > > 
 > {: .solution}
 > 
-> {: .challenge}
+{: .challenge}
 
 
-> ## Push only when release
+> ## Build and push image only when release
 >
 > *  Add a condition to only push to DockerHub when a release is pushed (a.k.a. creating a tag 🏷️)
 > *  2 solutions are available for this case: 
 >    *  using a `if` condition in the GitHub workflow (recommended)
 >    *  use a parameter provided by the "Build and push Docker images" action.
 >
-> > ## Solution
-> > ~~~YAML
-> > name: Test and publish to DockerHub
-> > on:
-> >   push:
-> >     branches: [ master ]
-> > jobs:
-> >   test:
-> >     [...]
-> >   
-> >   build:
-> >     if: startsWith(github.event.ref, 'refs/tags')
-> >     needs: test
-> >     runs-on: ubuntu-latest
-> > 
-> >     steps:
-> >     - uses: docker/build-push-action@v1
-> >       with:
-> >         username: ${{ secrets.DOCKER_USERNAME }}
-> >         password: ${{ secrets.DOCKER_PASSWORD }}
-> >         repository: myorg/my-repository
-> >         tag_with_ref: true
-> > ~~~
-> {: .solution}
->
-> {: .challenge}
+{: .challenge}
 
+> ## Solution
+> ~~~YAML
+> name: Test and publish to DockerHub
+> on:
+>   push:
+>     branches: [ master ]
+> jobs:
+>   test:
+>     [...]
+>   
+>   build:
+>     if: startsWith(github.event.ref, 'refs/tags')
+>     needs: test
+>     runs-on: ubuntu-latest
+> 
+>     steps:
+>     - uses: docker/build-push-action@v1
+>       with:
+>         username: ${{ secrets.DOCKER_USERNAME }}
+>         password: ${{ secrets.DOCKER_PASSWORD }}
+>         repository: myorg/my-repository
+>         tag_with_ref: true
+> ~~~
+{: .solution}
