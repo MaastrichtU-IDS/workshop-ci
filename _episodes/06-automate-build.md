@@ -26,7 +26,7 @@ If the tests pass without failing you might want to build a Docker image for you
 > > Once a secret has been defined no one (not even you) can read it, you can still override it though.
 >
 > > ## Solution
-> > ~~~YAML
+> > ```YAML
 > > name: Test and publish to DockerHub
 > > on:
 > >   push:
@@ -48,11 +48,10 @@ If the tests pass without failing you might want to build a Docker image for you
 > >         repository: myorg/myrepository
 > >         tag_with_ref: true
 > >         push: ${{ startsWith(github.ref, 'refs/tags/') }}
-> > ~~~
-> > {: .output}
+> > ```
 > {: .solution}
 >
-> {: .challenge}
+{: .challenge}
 
 
 > ## Push only when release
@@ -61,7 +60,7 @@ If the tests pass without failing you might want to build a Docker image for you
 > *  2 solutions are available for this case: using a `if` condition in the GitHub workflow (recommended), or use a parameter provided by the "Build and push Docker images" action.
 >
 > > ## Solution
-> > ~~~YAML
+> > ```YAML
 > > name: Test and publish to DockerHub
 > > on:
 > >   push:
@@ -82,10 +81,8 @@ If the tests pass without failing you might want to build a Docker image for you
 > >         password: ${{ secrets.DOCKER_PASSWORD }}
 > >         repository: myorg/myrepository
 > >         tag_with_ref: true
-> > ~~~
-> > {: .output}
-> > {: .solution}
+> > ```
+> {: .solution}
 >
->
-> {: .challenge}
+{: .challenge}
 

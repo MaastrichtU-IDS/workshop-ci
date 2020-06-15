@@ -59,7 +59,18 @@ Check [here](https://help.github.com/en/github/setting-up-and-managing-organizat
 
 ## Adding a license
 
-Adding a license is always important as no one is allowed to legally use your code if no license is included. It is therefore customary to add a *LICENSE* or *LICENSE.txt* file to the root of your repository. There are many different existing licenses that can be reused. Unless you are a lawyer, you should never write your own license. Check [https://choosealicense.com](https://choosealicense.com/) to see which license fits your project best. Ofcourse this decision should be made together with all collaborators if the project spans multiple institutions. As a default at IDS we advise using the MIT license, which allows anyone to use the code in any way they see fit (even selling it or making their version closed source) but also makes clear you are not responsible for any damages that may be incurred by using the code.
+Adding a license is mandatory as no one is allowed to legally use your code if no license is included. 
+
+It is therefore customary to add a *LICENSE* or *LICENSE.txt* file to the root of your repository. There are many different existing licenses that can be reused. Unless you are a lawyer, you should never write your own license. Check [https://choosealicense.com](https://choosealicense.com/) to see which license fits your project best. 
+
+Of course this decision should be made together with all collaborators if the project spans multiple institutions. 
+
+As a default at IDS we advise using the **MIT license**, which allows anyone to use the code in any way they see fit (even selling it or making their version closed source), but also makes clear you are not responsible for any damages that may be incurred by using the code.
+
+Other popular Open Sources licenses includes:
+
+* **Apache 2**: similar to the MIT license, but more detailed, it requires to list changes made to the original software, and introduce restrictions related to trademark use.  You might want to consider this license for bigger and more structured projects.
+* **GNU GPL v3**: a "copyleft" license, it includes restrictions about which license you should use when using a GPL licensed code. Typically, a GPL licensed project requires other projects using their code to be open source.
 
 > ## Configure repository permissions
 > *   Choose a license at [https://choosealicense.com](https://choosealicense.com/)

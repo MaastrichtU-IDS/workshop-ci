@@ -25,7 +25,7 @@ You just need to register providing a valid email address and a username, then t
 >*   Define `PYPI_USERNAME` and `PYPI_PASSWORD` Secrets 🙈
 > 
 > > ## Solution
-> > ~~~YAML
+> > ```YAML
 > >   publish:
 > >     if: startsWith(github.event.ref, 'refs/tags')
 > >     needs: test
@@ -49,11 +49,10 @@ You just need to register providing a valid email address and a username, then t
 > >       run: |
 > >         python setup.py sdist bdist_wheel
 > >         twine upload dist/*
->> ~~~
-> > {: .output}
-> > {: .solution}
+> > ```
+> {: .solution}
 > 
-> {: .challenge}
+{: .challenge}
 
 > ## Publish a new release
 >
@@ -69,4 +68,4 @@ You just need to register providing a valid email address and a username, then t
 > ![Version](https://img.shields.io/pypi/v/my-package)
 > ```
 >
-> {: .challenge}
+{: .challenge}
