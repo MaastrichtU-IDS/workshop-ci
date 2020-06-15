@@ -13,7 +13,9 @@ keypoints:
 - "Templates are a quick way to scaffold your application."
 ---
 
-Some introductory text
+Example: https://github.com/vemonet/sparql-operations-action
+
+Might be a bit too advanced at the moment and not that relevant: people at IDS don't need to publish their applications as GitHub Actions. We could just mention they can do it and propose pointers
 
 > ## Create a repository from template
 >

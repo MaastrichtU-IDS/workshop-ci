@@ -9,26 +9,64 @@ objectives:
 - "Understand the benifits of templates and how they differ from forking/cloning."
 - "Understand how to allow the different levels of access to your repository."
 keypoints:
-- "When creating a GitHub repository keep permissions in mind."
-- "Templates are a quick way to scaffold your application."
+- "Use template provided by GitHub."
+- "Set PyPI credentials in GitHub Secrets."
+- "Add a version badge to display the latest version available on PyPI in your README."
 ---
 
-Some introductory text
+The best way to make your application FAIR (Findable Accessible Interoperable and Reusable) is to publish it as a package in a popular repository. In the case of Python packages, the reference repository is [PyPI](https://pypi.org/) (pronounce Pie-Pea-Eye).
 
-> ## Create a repository from template
+You just need to register providing a valid email address and a username, then the project will be automatically created and you will be set as its owner if the chosen project name has not already been taken.
+
+> ## Automatically publish to PyPI
 >
-> *   first step 
+> *   Add a new job named `publish`. Similarly to the build Docker job, this job will be triggered only if a release/tag is pushed.
+> *   Use the template **Publish Python Package** provided by GitHub in your repository **Actions** tab (which uses `twine`).
+>*   Define `PYPI_USERNAME` and `PYPI_PASSWORD` Secrets 🙈
+> 
+> > ## Solution
+> > ~~~YAML
+> >   publish:
+> >     if: startsWith(github.event.ref, 'refs/tags')
+> >     needs: test
+> >     runs-on: ubuntu-latest
+> > 
+> >     steps:
+> >     - uses: actions/checkout@v2
+> >     - name: Set up Python
+> >       uses: actions/setup-python@v2
+> >       with:
+> >         python-version: '3.x'
+> >     - name: Install dependencies
+> >       run: |
+> >         python -m pip install --upgrade pip
+> >         pip install setuptools wheel twine
+> >     - name: Build and publish to PyPI
+> >       if: startsWith(github.event.ref, 'refs/tags')
+> >       env:
+> >         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+> >         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+> >       run: |
+> >         python setup.py sdist bdist_wheel
+> >         twine upload dist/*
+>> ~~~
+> > {: .output}
+> > {: .solution}
+> 
+> {: .challenge}
+
+> ## Publish a new release
+>
+> *  Publish a new release to trigger the newly created publish job and publish the first version of your package! 🏷️
 >
 {: .challenge}
 
-> ## Configure repository permissions
+> ## Add version badge
 >
-> *   first step 
+> *   Add a badge getting the latest version from PyPI to your project `README.md`
 >
-{: .challenge}
-
-> ## Configure SSH
+> ```markdown
+> ![Version](https://img.shields.io/pypi/v/my-package)
+> ```
 >
-> *   first step 
->
-{: .challenge}
+> {: .challenge}
