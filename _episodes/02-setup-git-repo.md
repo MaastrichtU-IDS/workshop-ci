@@ -41,7 +41,7 @@ Note that there are many generic solutions to 'scaffold' your application when s
 
 ## Repository permissions
 
-GitHub diffferentiates between 5 different types of access:
+GitHub differentiates between 5 different types of access:
 - **Read** - for users who only need to view or discuss the code.
 - **Triage** - Allows users to do minor administrative tasks such as modifying issues and requesting reviews.
 - **Write** - Allows users to push code to the repository and setup GitHub actions.
