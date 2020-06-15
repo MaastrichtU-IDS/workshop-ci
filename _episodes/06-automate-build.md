@@ -26,6 +26,7 @@ If the tests pass without failing you might want to build a Docker image for you
 > > Once a secret has been defined no one (not even you) can read it, you can still override it though.
 >
 > > ## Solution
+> > {% raw %}
 > > ~~~YAML
 > > name: Test and publish to DockerHub
 > > on:
@@ -47,6 +48,7 @@ If the tests pass without failing you might want to build a Docker image for you
 > >         repository: myorg/my-repository
 > >         tag_with_ref: true
 > > ~~~
+> > {% endraw %}
 > > 
 > {: .solution}
 > 
@@ -63,7 +65,8 @@ If the tests pass without failing you might want to build a Docker image for you
 {: .challenge}
 
 > ## Solution
-> ~~~YAML
+> {% raw %}
+> ```YAML
 > name: Test and publish to DockerHub
 > on:
 >   push:
@@ -84,5 +87,6 @@ If the tests pass without failing you might want to build a Docker image for you
 >         password: ${{ secrets.DOCKER_PASSWORD }}
 >         repository: myorg/my-repository
 >         tag_with_ref: true
-> ~~~
+> ```
+> {% endraw %}
 {: .solution}
