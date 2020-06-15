@@ -5,13 +5,17 @@ exercises: 1
 questions:
 - "What are the advantages of using Docker?"
 - "How do I use Docker to package my application?"
+- "How do I share my Docker Images with my colleagues?"
 objectives:
-- "Understand the usecases of Docker."
 - "Know how to run Docker containers locally."
+- "Understand how Docker images are shared and reused."
+- "Know how to push images to a Docker repository."
 - "Understand why Docker container orchestration is useful."
+
 keypoints:
 - "Docker solves 'it only runs on my laptop' issues."
 - "Docker images can be reused to share container blueprints."
+- "Sharing Docker images saves time recreating work and environments"
 ---
 `
 ## Introduction
@@ -75,6 +79,23 @@ After the image is created we can create a container from it and run a command i
 >
 > *   Create and run your application inside a container based on the image created earlier.
 >
+{: .challenge}
+
+## Sharing Docker images
+
+When a Docker image is created, it is at first stored locally. To share images with others, Docker *Repositories* can be hosted on dockerhub. After *pushing* an image, others will be able to *pull* from the same repository. Note that with a free organization plan *all* docker repositories are public.
+Images are stored by supplying a *repository id* and a *tag*. If no *tag* is supplied, the image will default to the *latest* tag. *latest* does not have any special meaning, but the convention is to use this tag for the latest version of the image. In a build process for example, you may decide to tag the image twice; once with a specific version number and once with latest to overwrite the current latest image.
+
+> ## Push Docker image to dockerhub
+>
+> *   [Sign up for a Docker ID](https://hub.docker.com/signup)
+> * Ask an administrator (t.hendriks@maastrichtuniversity.nl for example) to be added to the IDS organization developers team on dockerhub.
+> * Under the **Repositories** tab, select the *umids* organization and **Create Repository**.
+![Creating a Docker Repository]({{ page.root }}/fig/create-repository.png)
+> * Provide a Repository name (**name should be equal to the repository id of your created image**) and description while leaving the other values on their defaults. Create the repository.
+> * In a terminal, use ```docker login``` to login to your docker account.
+> * Use ```docker push umids/REPOSITORY_NAME:TAG_NAME``` to push your image to dockerhub.
+> * Check your repository on [dockerhub](https://hub.docker.com) to see your hosted image.
 {: .challenge}
 
 ## Orchestrating Containers
