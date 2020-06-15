@@ -62,14 +62,14 @@ FIXME: add some comments on good practices for order of dockerfile contents.
 > * Add the first code snippet above to your *Dockerfile* to setup the image environment. 
 > * Add the second code snippet above to your *Dockerfile* to add contents from your repository to the image.
 > * Add the third code snippet above to your *Dockerfile* to install your Python modules in the image.
-> * Create your image by running ```bash docker build . -t ci-workshop```.
-> * Confirm the creation of your image with ```bash docker image ls```.
+> * Create your image by running ```docker build . -t ci-workshop```.
+> * Confirm the creation of your image with ```docker image ls```.
 > * Add the build instructions to the README.md.
 {: .challenge}
 
 ## Running a Docker Container
 
-After the image is created we can create a container from it and run a command inside it. While ```bash docker create [OPTIONS] IMAGE [COMMAND] [ARG...]``` creates the container, we can also use ```bash docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]``` to create the container just as the create command, and afterwards runs it. It then performs the specified command inside the container.
+After the image is created we can create a container from it and run a command inside it. While ```docker create [OPTIONS] IMAGE [COMMAND] [ARG...]``` creates the container, we can also use ```docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]``` to create the container just as the create command, and afterwards runs it. It then performs the specified command inside the container.
 
 > ## Run a Docker Container
 >

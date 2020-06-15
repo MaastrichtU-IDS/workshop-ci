@@ -21,8 +21,8 @@ Images are stored by supplying a *repository id* and a *tag*. If no *tag* is sup
 > * Under the **Repositories** tab, select the *umids* organization and **Create Repository**.
 ![Creating a Docker Repository]({{ page.root }}/fig/create-repository.png)
 > * Provide a Repository name (**name should be equal to the repository id of your created image**) and description while leaving the other values on their defaults. Create the repository.
-> * In a terminal, use ```bash docker login``` to login to your docker account.
-> * Use ```bash docker push umids/REPOSITORY_NAME:TAG_NAME``` to push your image to dockerhub.
+> * In a terminal, use ```docker login``` to login to your docker account.
+> * Use ```docker push umids/REPOSITORY_NAME:TAG_NAME``` to push your image to dockerhub.
 > * Check your repository on [dockerhub](https://hub.docker.com) to see your hosted image.
 {: .challenge}
 

@@ -6,11 +6,13 @@ questions:
 - "What do I need to think about when creating a new repository on GitHub?"
 objectives:
 - "Know how to setup a GitHub repository according to IDS standards."
+- "Understand which license to add to your repository."
 - "Understand the benifits of templates and how they differ from forking/cloning."
 - "Understand how to allow the different levels of access to your repository."
 keypoints:
 - "When creating a GitHub repository keep permissions in mind."
 - "Templates are a quick way to scaffold your application."
+- "Don't create your own license."
 ---
 ## Introduction
 Setting up a GIT repository should always be the first step for any software related project. For the many advantages of using GIT check [here](https://guides.github.com/introduction/git-handbook/). While there are many options for hosting your repository, the default choice at IDS is GitHub. Some of the advantages of using GitHub are features like free processing power, free artifact hosting, a large community and having all IDS repositories searchable under the same organisation. 
@@ -53,6 +55,15 @@ Check [here](https://help.github.com/en/github/setting-up-and-managing-organizat
 > *   Click **Invite teams or people**.
 > *   Add the MaastrichtU-IDS/developers team and provide them with *Write* access.
 > *   Add the MaastrichtU-IDS/admins team and provide them with *Admin* access.
+{: .challenge}
+
+## Adding a license
+
+Adding a license is always important as no one is allowed to legally use your code if no license is included. It is therefore customary to add a *LICENSE* or *LICENSE.txt* file to the root of your repository. There are many different existing licenses that can be reused. Unless you are a lawyer, you should never write your own license. Check [https://choosealicense.com](https://choosealicense.com/) to see which license fits your project best. Ofcourse this decision should be made together with all collaborators if the project spans multiple institutions. As a default at IDS we advise using the MIT license, which allows anyone to use the code in any way they see fit (even selling it or making their version closed source) but also makes clear you are not responsible for any damages that may be incurred by using the code.
+
+> ## Configure repository permissions
+> *   Choose a license at [https://choosealicense.com](https://choosealicense.com/)
+> *   Add the license to your repository root as *LICENSE*
 {: .challenge}
 
 ## Using SSH
