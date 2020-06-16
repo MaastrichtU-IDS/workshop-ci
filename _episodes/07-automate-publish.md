@@ -16,16 +16,17 @@ keypoints:
 
 The best way to make your application FAIR (Findable Accessible Interoperable and Reusable) is to publish it as a package in a popular repository. In the case of Python packages, the reference repository is [PyPI](https://pypi.org/) (pronounce Pie-Pea-Eye).
 
-You just need to register providing a valid email address and a username, then the project will be automatically created and you will be set as its owner if the chosen project name has not already been taken.
+You just need to register providing a valid email address and a username, then the project will be automatically created in PyPI, and you will be set as its owner if the chosen project name has not already been taken.
 
 > ## Automatically publish to PyPI
 >
 > *   Add a new job named `publish`. Similarly to the build Docker job, this job will be triggered only if a release/tag is pushed.
 > *   Use the template **Publish Python Package** provided by GitHub in your repository **Actions** tab (which uses `twine`).
->*   Define `PYPI_USERNAME` and `PYPI_PASSWORD` Secrets 🙈
+> *   Define `PYPI_USERNAME` and `PYPI_PASSWORD` Secrets 🙈
 > 
 > > ## Solution
-> > ~~~YAML
+> > {% raw %}
+> > ```YAML
 > >   publish:
 > >     if: startsWith(github.event.ref, 'refs/tags')
 > >     needs: test
@@ -49,7 +50,8 @@ You just need to register providing a valid email address and a username, then t
 > >       run: |
 > >         python setup.py sdist bdist_wheel
 > >         twine upload dist/*
-> > ~~~
+> > ```
+> > {% endraw %}
 > {: .solution}
 > 
 {: .challenge}

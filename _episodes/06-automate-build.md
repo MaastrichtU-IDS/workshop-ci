@@ -12,12 +12,12 @@ keypoints:
 - "Set sensible informations, such as passwords, in GitHub Secrets."
 ---
 
-If the tests pass without failing you might want to build a Docker image for your application, and publish it to [DockerHub](https://hub.docker.com/). This will enable anyone to easily reuse your applications without the need to install dependencies.
+You can add a job to your GitHub Action workflow which will automatically build the Docker image and push it to [DockerHub](https://hub.docker.com/) if the tests pass.
 
 > ## Build and push Docker image
 >
 > *  Find the **Build and push Docker images** action on the [GitHub Marketplace](https://github.com/marketplace?type=actions): [https://github.com/marketplace](https://github.com/marketplace)
-> *  Use the action to automatically build and push a Docker image if the tests pass. Do the build in a new job named `build`. Use the **Example usage** section in the action readme.
+> *  Use the action to automatically build and push a Docker image with tag `latest` if the tests pass. Do the build in a new job named `build`. Use the **Example usage** section in the action readme.
 > *  You can safely store your DockerHub username and password using secrets. 
 >    *  Go to the ⚙️ **Settings** tab of your GitHub repository
 >    *  Go to **Secrets** in the left navbar. 
@@ -46,7 +46,7 @@ If the tests pass without failing you might want to build a Docker image for you
 > >         username: ${{ secrets.DOCKER_USERNAME }}
 > >         password: ${{ secrets.DOCKER_PASSWORD }}
 > >         repository: myorg/my-repository
-> >         tag_with_ref: true
+> >         tags: latest
 > > ~~~
 > > {% endraw %}
 > > 
@@ -54,10 +54,12 @@ If the tests pass without failing you might want to build a Docker image for you
 > 
 {: .challenge}
 
+It is recommended to avoid rebuilding and publishing a new image at every new push to master. We will now set the build and push job to only be triggered if a new release is created on GitHub (a.k.a tag 🏷️)
 
 > ## Build and push image only when release
 >
-> *  Add a condition to only push to DockerHub when a release is pushed (a.k.a. creating a tag 🏷️)
+> *  Add a condition to only push to DockerHub when a release is pushed
+> * Use the GitHub tag to tag the DockerHub image
 > *  2 solutions are available for this case: 
 >    *  using a `if` condition in the GitHub workflow (recommended)
 >    *  use a parameter provided by the "Build and push Docker images" action.
