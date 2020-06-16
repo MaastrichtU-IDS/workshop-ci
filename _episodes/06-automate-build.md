@@ -23,7 +23,7 @@ You can add a job to your GitHub Action workflow which will automatically build 
 >    *  Go to **Secrets** in the left navbar. 
 >    *  Create 2 secrets that will be used by the GitHub Actions workflow: `DOCKER_USERNAME` and `DOCKER_PASSWORD` 🔒
 >
-> > Once a secret has been defined no one (not even you) can read it, you can still override it though.
+> Once a secret has been defined no one (not even you) can read it 🙈, you can still override it though.
 >
 > > ## Solution
 > > {% raw %}
