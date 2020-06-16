@@ -65,16 +65,22 @@ It is therefore customary to add a *LICENSE* or *LICENSE.txt* file to the root o
 
 Of course this decision should be made together with all collaborators if the project spans multiple institutions. 
 
-As a default at IDS we advise using the **MIT license**, which allows anyone to use the code in any way they see fit (even selling it or making their version closed source), but also makes clear you are not responsible for any damages that may be incurred by using the code.
-
-Other popular Open Sources licenses includes:
-
-* **Apache 2**: similar to the MIT license, but more detailed, it requires to list changes made to the original software, and introduce restrictions related to trademark use.  You might want to consider this license for bigger and more structured projects.
-* **GNU GPL v3**: a "copyleft" license, it includes restrictions about which license you should use when using a GPL licensed code. Typically, a GPL licensed project requires other projects using their code to be open source.
+As a default at IDS we advise using the **MIT license** 📜, which allows anyone to use the code in any way they see fit (even selling it or making their version closed source), but also makes clear you are not responsible for any damages that may be incurred by using the code.
 
 > ## Configure repository permissions
 > *   Choose a license at [https://choosealicense.com](https://choosealicense.com/)
-> *   Add the license to your repository root as *LICENSE*
+> *	     Add the license to your repository root as *LICENSE*
+>
+> > ## Solution
+> >
+> > Apart from the **MIT license**, other popular Open Sources licenses includes:
+> >
+> > * **Apache 2**: similar to the MIT license, but more detailed, it requires to list changes made to the original software, and introduce restrictions related to trademark use.  You might want to consider this license for bigger and more structured projects.
+> > * **GNU GPL v3**: a "copyleft" license, it includes restrictions about which license you should use when using a GPL licensed code. Typically, a GPL licensed project requires other projects using their code to be open source.
+> >
+> >
+> {: .solution} 
+>
 {: .challenge}
 
 ## Using SSH
