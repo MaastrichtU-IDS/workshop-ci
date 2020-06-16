@@ -8,7 +8,7 @@ objectives:
 - "Increase version number."
 - "Create new release."
 keypoints:
-- "Just do no mess up the version number."
+- "Just do not mess up the version number change."
 ---
 
 Now that you have published a first version of your package you might want to edit it and publish a new version:
