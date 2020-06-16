@@ -64,31 +64,31 @@ It is recommended to avoid rebuilding and publishing a new image at every new pu
 >    *  using a `if` condition in the GitHub workflow (recommended)
 >    *  use a parameter provided by the "Build and push Docker images" action.
 >
+> > ## Solution
+> > {% raw %}
+> > ```YAML
+> > name: Test and publish to DockerHub
+> > on:
+> > push:
+> >  branches: [ master ]
+> > jobs:
+> > test:
+> >  [...]
+> > 
+> > build:
+> >  if: startsWith(github.event.ref, 'refs/tags')
+> >  needs: test
+> >  runs-on: ubuntu-latest
+> > 
+> >  steps:
+> >     - uses: docker/build-push-action@v1
+> >       with:
+> >         username: ${{ secrets.DOCKER_USERNAME }}
+> >         password: ${{ secrets.DOCKER_PASSWORD }}
+> >         repository: myorg/my-repository
+> >         tag_with_ref: true
+> > ```
+> > {% endraw %}
+> {: .solution}
+>
 {: .challenge}
-
-> ## Solution
-> {% raw %}
-> ```YAML
-> name: Test and publish to DockerHub
-> on:
->   push:
->     branches: [ master ]
-> jobs:
->   test:
->     [...]
->   
->   build:
->     if: startsWith(github.event.ref, 'refs/tags')
->     needs: test
->     runs-on: ubuntu-latest
-> 
->     steps:
->     - uses: docker/build-push-action@v1
->       with:
->         username: ${{ secrets.DOCKER_USERNAME }}
->         password: ${{ secrets.DOCKER_PASSWORD }}
->         repository: myorg/my-repository
->         tag_with_ref: true
-> ```
-> {% endraw %}
-{: .solution}
