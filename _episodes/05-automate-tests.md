@@ -47,7 +47,7 @@ Now that your application can be run locally and built as a Docker image we will
 >
 > Note that if your project hosts its code on GitLab, we recommend to use GitLab CI. Which works with mechanisms similar to GitHub Actions.
 >
-> {: .callout}
+{: .callout}
 
 Since this project is be open source we don't need to worry about spendings 💸
 
@@ -62,7 +62,7 @@ Since this project is be open source we don't need to worry about spendings 💸
 > *   It will generate a `python-package.yml` workflow with common steps to test a Python package.
 > *   You should now be able to edit the workflow generated in GitHub web interface.
 >
-> {: .challenge}
+{: .challenge}
 
 ## Inspect the generated workflow
 
