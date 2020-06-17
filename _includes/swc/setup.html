@@ -149,6 +149,52 @@
         <p>
           <code>choco install docker-desktop</code>
         </p>
+        <p>If you have Windows home or don't want to create a DockerHub account, use <a href="https://chocolatey.org/packages/docker-toolbox">
+          docker-toolbox</a>:
+        </p>
+        <p>
+          <code>choco install docker-toolbox -ia /COMPONENTS="kitematic,virtualbox,dockercompose" -ia /TASKS="desktopicon,modifypath,upgradevm"</code>
+        </p>
+        <p>
+          Open the <i>Docker Quickstart Terminal </i>to start Docker.
+        </p>
+        <p>Additional components that might be needed to install (VM and GUI):
+          <code>choco install virtualbox docker-kitematic</code>
+        </p>
+        <p>
+          <a href="choco install virtualbox docker-kitematic"><B>Activate Virtualization</B></a>
+        </p>
+        <p>
+          Virtualization and Hyper-V must be<a href="https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization">
+            activated.</a> Check in the <code>Task Manager,</code> in tab <code>Performance</code> if Virtualization is <code>enabled.</code>
+        </p>
+        <p>
+          Check the <a href="https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization">
+            documentation to enable it.</a>
+        </p>
+        <ul>
+          <li>
+            Docker-desktop installation will propose to install virtualization automatically after the Docker installation, if they are not installed.
+          </li>
+          <li>
+            Note that Docker Hyper-V is not available for Windows 10 Home edition (you will need Pro or Enterprise edition)
+          </li>
+          <li>
+            You might need to access the BIOS to enable VT-x virtualization
+          </li>
+          <li>
+            Share drive
+          </li>
+        </ul>
+        <p>
+          By default <code>docker-desktop</code> and <code>docker-toolbox</code> are sharing your <code>C:/Users</code> volume. Docker will only be able to access folders and files in the <code>Shared Drives.</code> So make sure you execute <code>d2s init</code> somewhere in your users directories.
+        </p>
+        <p>On <code>docker-desktop</code> you can change it in <big>Docker config</big> > <code>Settings</code> > <code>Shared Drives</code> > <big>Share Drive C</big>
+        </p>
+        <p>
+          On <code>docker-toolbox</code> you need to change the settings of the Virtual Box
+        </p>
+
       </article>
       <article role="tabpanel" class="tab-pane active" id="editor-macos">
         <p>
