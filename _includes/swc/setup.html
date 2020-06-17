@@ -217,22 +217,27 @@
       </article>
       <article role="tabpanel" class="tab-pane active" id="editor-linux">
         <p>
-          nano is a basic editor and the default that instructors use in the workshop.
-          It should be pre-installed.
+          Install <a href="https://docs.docker.com/engine/install/ubuntu/">Docker</a> and <a href="https://docs.docker.com/compose/install/">docker-compose.</a> 
         </p>
         <p>
-          Others editors that you can use are
-          <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
-          <a href="https://kate-editor.org/">Kate</a> or
-          <a href="https://www.sublimetext.com/">Sublime Text</a>.
+          <code>
+            sudo apt update
+            sudo apt install docker.io
+            sudo systemctl enable --now docker
+  
+            sudo usermod -aG docker ${USER}
+  
+            # Install docker-compose
+            sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+            sudo chmod +x /usr/local/bin/docker-compose
+          </code>
+        </p>
+        <p>
+          <code>sudo groupadd docker</code> could be required before <code>usermod</code> if the group has not been created.
         </p>
       </article>
     </div>
   </div>
-
-  <p><a href="https://d2s.semanticscience.org/docs/d2s-installation#fix-known-issues"> To fix known issues </a>
-    or <a href="https://docs.docker.com/compose/install/"> Official Document.
-  </a></p>
 </div> {% comment %} End of 'editor' section. {% endcomment %}
 
 <div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatibility
