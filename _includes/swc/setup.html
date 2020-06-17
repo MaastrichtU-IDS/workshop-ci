@@ -220,23 +220,19 @@
           Install <a href="https://docs.docker.com/engine/install/ubuntu/">Docker</a> and <a href="https://docs.docker.com/compose/install/">docker-compose.</a> 
         </p>
         <p>
-          
-            {% raw %}
-            ~~~YAML
-            
-              sudo apt update
-              sudo apt install docker.io
-              sudo systemctl enable --now docker
+<pre>
+<code>
+sudo apt update
+sudo apt install docker.io
+sudo systemctl enable --now docker
     
-              sudo usermod -aG docker ${USER}
+sudo usermod -aG docker ${USER}
     
-              # Install docker-compose
-              sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-              sudo chmod +x /usr/local/bin/docker-compose
-            
-            ~~~
-            {% endraw %}
-          
+# Install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+</code>
+</pre>
         </p>
         <p>
           <code>sudo groupadd docker</code> could be required before <code>usermod</code> if the group has not been created.
