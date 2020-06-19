@@ -51,4 +51,12 @@ Continuousy adding documentation is vital for others to make sense of your code.
 >
 {: .challenge}
 
+## Updating the repository
+
+> ## Commit and push changes
+>
+> *   Use GIT to commit and push your local changes.
+>
+{: .challenge}
+
 {% include links.md %}
