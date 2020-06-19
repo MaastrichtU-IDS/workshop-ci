@@ -109,4 +109,12 @@ There are a large number of solutions of varying complexity to handle things suc
 >
 {: .challenge}
 
+## Updating the repository
+
+> ## Commit and push changes
+>
+> *   Use GIT to commit and push your local changes.
+>
+{: .challenge}
+
 {% include links.md %}

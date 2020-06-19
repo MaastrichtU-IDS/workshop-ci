@@ -14,14 +14,14 @@ keypoints:
 
 ## Running the Python application
 
-Before starting with CI/CD we will first check the application works correctly locally. The Python template comes with a setup.py file which allows an easy pip install of our application. Since performing '''pip3 install .''' each time we make a change can be tiresome, the -e argument can be added to pip install, to automatically reflect any change you make to the application directly in the environment.
+Before starting with CI/CD we will first check the application works correctly locally. The Python template comes with a setup.py file which allows an easy pip install of our application. Since performing ```pip3 install .``` each time we make a change can be tiresome, the -e argument can be added to pip install, to automatically reflect any change you make to the application directly in the environment.
 
 In our setup.py, a good practice is to use requirements.txt to keep track of the dependencies of our application that need to be installed. These can then be installed using the setup.py or manually running ```pip3 install -r requirements.txt```.
 
 > ## Running the application
 >
 > * Run ```pip3 install -e .  ```
-> * Run ```workshop_ci hello-world --help  ``` to see how to run your application.
+> * Run ```workshop_ci hello-world --help ```  to see how to run your application.
 > * Run the application with the correct inputs.
 >
 {: .challenge}

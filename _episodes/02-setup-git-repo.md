@@ -19,9 +19,8 @@ Setting up a GIT repository should always be the first step for any software rel
 When first setting up a GitHub repository, there are a number of things to consider:
 - Is there a template I can use to save time setting everything up?
 - Who will have permissions to read/write/administrate this repository?
+- What license does the repository require?
 - Do I have SSH keys configured?
-
-Create and setup GitHub repository: setup SSH key, create repo from template, manage access of the created repository, give maintainer access of the created project to ids-developers team)
 
 ## GitHub templates
 
@@ -36,7 +35,7 @@ Note that there are many generic solutions to 'scaffold' your application when s
 > * Choose the MaastrichtU-IDS/workshop-ci-template from the repository template dropdown.
 > ![Selecting a Template]({{ page.root }}/fig/template-selection.png)
 > * Select MaastrichtU-IDS as the owner of the repository.
-> * Add a name and description to your repository and leave the access on *private*. 
+> * Add a name and description to your repository and set the access to *private*. 
 {: .challenge}
 
 ## Repository permissions
