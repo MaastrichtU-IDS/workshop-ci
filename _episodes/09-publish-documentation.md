@@ -64,3 +64,11 @@ We recommend to use [Docusaurus](https://docusaurus.io/) from facebook Open Sour
 Docusaurus provides scripts to easily deploy your website to GitHub or GitLab Pages, or using Docker. 
 
 Get started in a few minutes at https://github.com/facebook/docusaurus
+
+## Complete documentation website with readthedocs
+
+Another popular solution to publish documentation is [Read the Docs](https://readthedocs.org/).
+
+* The advantage of readthedocs is that it will publish the website publicly under the readthedocs.io domain (instead of publishing it to GitHub Pages). E.g. https://papermill.readthedocs.io
+
+* The disadvantage of readthedocs is that in its free version the documentation website will include (discret) ads.
