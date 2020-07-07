@@ -1,0 +1,35 @@
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:admin="http://webns.net/mvcb/">
+<name>Continuous Integration Workshop</name>
+<shortname>Continuous Integration Workshop</shortname>
+<shortdesc>Workshop on how to perform CI/CD with GitHub actions .</shortdesc>
+<description>Workshop explaining how to use Github Actions to perform continuous integration and continuous deployment. Also explains some basics and best practices when using Git, Docker and Python templates.</description>
+<homepage rdf:resource="https://github.com/MaastrichtU-IDS/workshop-ci"/>
+<license rdf:resource="http://usefulinc.com/doap/licenses/mit"/>
+<maintainer>
+<foaf:Person>
+<foaf:name>Vincent Emonet</foaf:name>
+</foaf:Person>
+<foaf:Person>
+<foaf:name>Tim Hendriks</foaf:name>
+</foaf:Person>
+<foaf:Person>
+<foaf:name>Binosha Thirasi Weerarathna</foaf:name>
+</foaf:Person>
+</maintainer>
+<developer>
+<foaf:Person>
+<foaf:name>Vincent Emonet</foaf:name>
+</foaf:Person>
+<foaf:Person>
+<foaf:name>Tim Hendriks</foaf:name>
+</foaf:Person>
+<foaf:Person>
+<foaf:name>Binosha Thirasi Weerarathna</foaf:name>
+</foaf:Person>
+</developer>
+<repository>
+    <GitRepository>
+        <browse rdf:resource="https://github.com/MaastrichtU-IDS/workshop-ci.git"/>
+    </GitRepository>
+</repository>
+</Project>
